@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, .95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,0,0,.3);
+}
+
+nav {
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display:flex;
+    gap:55px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .3s;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: #ff0000;
+    transition: .4s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+section{
+    padding:90px 10%;
+}
+
+/* ===========================
+   INÍCIO
+=========================== */
+
+#inicio{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+#inicio h1{
+    font-size:60px;
+    color:red;
+    margin-bottom:25px;
+}
+
+#inicio p{
+    font-size:22px;
+    color:#d8d8d8;
+    line-height:1.8;
+}
+
+/* ===========================
+   ENSINO
+=========================== */
+
+#ensino{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    padding-top:40px;
+    padding-bottom:70px;
+}
+
+.bloco{
+    width:330px;
+    min-height:320px;
+
+    background:#181818;
+    border-radius:20px;
+    border:1px solid rgba(255,0,0,.25);
+    padding:35px;
+    transition:.4s;
+    box-shadow:0 0 20px rgba(255,0,0,.08);
+}
+
+.bloco:hover{
+    transform:translateY(-10px);
+    border-color:red;
+    box-shadow:0 0 35px rgba(255,0,0,.35);
+}
+
+.bloco h2{
+    color:red;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.bloco p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.8;
+}
+
+/* ===========================
+   PROJETOS
+=========================== */
+
+#projetos{
+    text-align:center;
+    padding-top:40px;
+}
+
+#projetos h2{
+    color:red;
+    font-size:48px;
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 45px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#ff0000,#940000);
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px red;
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+
+#contato{
+    text-align:center;
+
+    padding-top:40px;
+    padding-bottom:80px;
+}
+
+#contato h2{
+    color:red;
+    font-size:48px;
+    margin-bottom:25px;
+}
+
+#contato p{
+    font-size:20px;
+    margin:18px 0;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:red;
+    border-radius:50px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff4040;
+}
+
+/* ===========================================
+   RESPONSIVIDADE
+=========================================== */
+
+@media (max-width: 768px) {
+
+    /* Menu */
+    nav {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    /* Seções */
+    section {
+        padding: 100px 25px 60px;
+    }
+
+    /* Início */
+    #inicio {
+        text-align: center;
+        align-items: center;
+    }
+
+    #inicio h1 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    #inicio p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* Ensino */
+    #ensino {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .bloco {
+        width: 100%;
+        max-width: 350px;
+        min-height: auto;
+    }
+
+    .bloco h2 {
+        font-size: 28px;
+    }
+
+    .bloco p {
+        font-size: 18px;
+    }
+
+    /* Projetos */
+    #projetos h2,
+    #contato h2 {
+        font-size: 36px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Contato */
+    #contato p {
+        font-size: 18px;
+        word-break: break-word;
+    }
+
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 480px) {
+
+    .menu {
+        gap: 15px;
+    }
+
+    #inicio h1 {
+        font-size: 30px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    .bloco {
+        padding: 25px;
+    }
+
+    .bloco h2 {
+        font-size: 24px;
+    }
+
+    .bloco p {
+        font-size: 16px;
+    }
+
+    #projetos h2,
+    #contato h2 {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+}
