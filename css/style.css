@@ -14,10 +14,6 @@ body {
     color: #fff;
 }
 
-/* ===========================
-   HEADER
-=========================== */
-
 header {
     width: 100%;
     position: fixed;
@@ -70,17 +66,9 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ===========================
-   SEÇÕES
-=========================== */
-
 section{
     padding:90px 10%;
 }
-
-/* ===========================
-   INÍCIO
-=========================== */
 
 #inicio{
     min-height:100vh;
@@ -102,9 +90,6 @@ section{
     line-height:1.8;
 }
 
-/* ===========================
-   ENSINO
-=========================== */
 
 #ensino{
     display:flex;
@@ -148,10 +133,6 @@ section{
     line-height:1.8;
 }
 
-/* ===========================
-   PROJETOS
-=========================== */
-
 #projetos{
     text-align:center;
     padding-top:40px;
@@ -177,10 +158,6 @@ section{
     transform:translateY(-5px);
     box-shadow:0 0 30px red;
 }
-
-/* ===========================
-   CONTATO
-=========================== */
 
 #contato{
     text-align:center;
@@ -217,13 +194,8 @@ section{
     background:#ff4040;
 }
 
-/* ===========================================
-   RESPONSIVIDADE
-=========================================== */
-
 @media (max-width: 768px) {
 
-    /* Menu */
     nav {
         height: auto;
         padding: 20px 0;
@@ -240,12 +212,10 @@ section{
         font-size: 16px;
     }
 
-    /* Seções */
     section {
         padding: 100px 25px 60px;
     }
 
-    /* Início */
     #inicio {
         text-align: center;
         align-items: center;
@@ -261,7 +231,6 @@ section{
         line-height: 1.7;
     }
 
-    /* Ensino */
     #ensino {
         flex-direction: column;
         align-items: center;
@@ -282,7 +251,6 @@ section{
         font-size: 18px;
     }
 
-    /* Projetos */
     #projetos h2,
     #contato h2 {
         font-size: 36px;
@@ -295,7 +263,6 @@ section{
         padding: 15px;
     }
 
-    /* Contato */
     #contato p {
         font-size: 18px;
         word-break: break-word;
@@ -303,7 +270,6 @@ section{
 
 }
 
-/* Celulares pequenos */
 
 @media (max-width: 480px) {
 
